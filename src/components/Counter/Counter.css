@@ -1,0 +1,13 @@
+.boton{
+    background-color: inherit;
+    border: none;
+}
+
+.contenedor-boton{
+    background-color: beige;
+    border: solid 1px burlywood;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 200px;
+}
