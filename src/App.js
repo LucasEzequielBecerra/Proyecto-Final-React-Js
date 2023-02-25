@@ -7,7 +7,7 @@ import Counter from './components/Counter/Counter';
 
 
 function App() {
-
+  const productos = { id: 0, nombre: "monitor", precio: 80.000 }
 
 
   return (
@@ -15,7 +15,7 @@ function App() {
 
       <div className='container' >
         <BasicExample />
-        <ItemListContainer greeting={"Hola mundo"} />
+        <ItemListContainer productos={productos} />
         <Counter />
 
       </div>
