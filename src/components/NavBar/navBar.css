@@ -1,9 +1,22 @@
-
-
-.container-cart{
-width: 50px;
-display: flex;
-justify-content:center;
-border: solid 1px black;
-
+.header{
+    background-color: #11DD7E;
+    
+    
 }
+
+.nav-top{
+    
+    padding-bottom: 10px;
+}
+.nav-bot{
+    margin: top 2px;
+    border-top:solid 3px #085E36;
+    
+}
+
+
+.link-item{
+    color: aliceblue;
+    font-weight: 700;
+}
+

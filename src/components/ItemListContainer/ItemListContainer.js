@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getFetch } from '../../Mock'
-import ItemList from './ItemList'
+import ItemList, { getFetch } from './ItemList'
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
@@ -13,18 +12,18 @@ const ItemListContainer = () => {
     })
 
     return (
-        <div>{
-            loading
-                ?
-                <h1 className='cargando'> CARGANDO...</h1>
-                :
-                <div>
-                    <h1 className='titulo'>CATALOGO DE PRODUCTOS</h1>
-                    <div className='lista'>
-                        <ItemList Prod={productos} />
-                    </div>
+
+        loading
+            ?
+            <h1 className='cargando'> CARGANDO...</h1>
+            :
+            <div className='container'>
+                <h1 className='titulo'>CATALOGO DE PRODUCTOS</h1>
+                <div className='lista row justify-content-center'>
+                    <ItemList Prod={productos} />
                 </div>
-        }</div>
+            </div>
+
     )
 }
 
