@@ -1,7 +1,7 @@
 import React from 'react'
 import Item from './Item'
 
-const productos = [
+export const arrProductos = [
     {
         id: 0,
         title: "remera",
@@ -32,12 +32,12 @@ const productos = [
     }
 ]
 
-export const getFetch = new Promise((resolve, rejected) => {
+export const obtenerProductos = new Promise((resolve, rejected) => {
     let url = true
 
     if (url) {
         setTimeout(() => {
-            resolve(productos)
+            resolve(arrProductos)
         }, 2000);
 
     } else {

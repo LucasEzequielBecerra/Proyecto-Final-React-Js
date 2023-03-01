@@ -1,11 +1,11 @@
-.boton{
+.button{
     background-color: inherit;
     border: none;
 }
 
-.contenedor-boton{
-    background-color: beige;
-    border: solid 1px burlywood;
+.container-button{
+    background-color:#f3f3f3;
+    border: solid 1px #606060;
     display: flex;
     justify-content: space-between;
     height: 30px;

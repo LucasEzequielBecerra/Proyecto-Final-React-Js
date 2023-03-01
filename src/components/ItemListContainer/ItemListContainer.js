@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import ItemList, { getFetch } from './ItemList'
+import ItemList, { obtenerProductos } from './ItemList'
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        getFetch.then((respuesta) => setProductos(respuesta))
+        obtenerProductos.then((respuesta) => setProductos(respuesta))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
     })

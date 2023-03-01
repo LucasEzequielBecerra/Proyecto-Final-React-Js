@@ -15,10 +15,10 @@ function Counter({ disabled }) {
     }
 
     return (
-        <div className="contenedor-boton">
-            <button className='boton' class={disabled} onClick={disminuir}><i><GrFormSubtract /></i></button>
+        <div className="container-button">
+            <button className='button' class={disabled} onClick={disminuir}><i><GrFormSubtract /></i></button>
             <span>{contador}</span>
-            <button className="boton" onClick={incrementar}><i><GrAdd /></i></button>
+            <button className="button" onClick={incrementar}><i><GrAdd /></i></button>
         </div>)
 
 }
