@@ -1,8 +1,12 @@
 .header{
-    background-color: #129f5e;
+    background-color: #7fd8d8;
     
     
 }
+body{
+    background-color: #f2f2f2;
+}
+
 
 .nav-top{
     
@@ -10,13 +14,29 @@
 }
 .nav-bot{
     margin: top 2px;
-    border-top:solid 3px #0f7445;
     
 }
 
+.img-logo{
+    height: 50px;
+    
+}
 
 .link-item{
     color: aliceblue;
-    font-weight: 700;
+    letter-spacing: 2px;
+    margin-left: 30px;
 }
 
+.btn-outline-success{
+    border: solid 1px #178080;
+    color: #178080;
+}
+
+.btn-outline-success:hover{
+    background-color: #178080;
+}
+
+.navbar-nav a{
+    text-decoration: none;
+}

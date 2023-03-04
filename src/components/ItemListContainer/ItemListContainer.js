@@ -1,15 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import ItemList, { obtenerProductos } from './ItemList'
+import { getProducts } from '../../products/Products'
+import ItemList from './ItemList'
+import './Style.css'
+
 const ItemListContainer = () => {
 
-    const [productos, setProductos] = useState([])
+    const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
+    async function leerDatos() {
+        try {
+            let respuesta = await getProducts()
+            setProducts(respuesta)
+        }
+        catch (err) {
+            alert(err)
+        }
+        finally {
+            setLoading(false)
+        }
+
+    }
+
     useEffect(() => {
-        obtenerProductos.then((respuesta) => setProductos(respuesta))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
-    })
+        leerDatos()
+    }, [])
 
     return (
 
@@ -17,10 +32,10 @@ const ItemListContainer = () => {
             ?
             <h1 className='cargando'> CARGANDO...</h1>
             :
-            <div className='container'>
-                <h1 className='titulo'>CATALOGO DE PRODUCTOS</h1>
+            <div className='container-cards '>
+                <h1 className='titulo container'>CATALOGO DE PRODUCTOS</h1>
                 <div className='lista row justify-content-center'>
-                    <ItemList Prod={productos} />
+                    <ItemList Prod={products} />
                 </div>
             </div>
 

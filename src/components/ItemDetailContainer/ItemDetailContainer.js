@@ -1,18 +1,39 @@
 import React from 'react'
 import ItemDetail from './ItemDetail'
 import { useState, useEffect } from 'react'
-import { obtenerProductos } from '../ItemListContainer/ItemList'
+import { arrProductos, getProductById, obtenerProductos } from '../../products/Products'
+import { useParams } from 'react-router-dom'
 
 
-const ItemDetailContainer = ({ Prod }) => {
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
+
+
+const ItemDetailContainer = ({ }) => {
+    const [product, setProduct] = useState([])
+    const [loading, setLoading] = useState(false)
+
+    const params = useParams();
+    const idProduct = params.idProduct;
+
+
+    async function elementFinded() {
+        try {
+            let respuesta = await getProductById(idProduct)
+            setProduct(respuesta)
+        }
+        catch (err) {
+            alert(err)
+        }
+        finally {
+            setLoading(false)
+        }
+
+    }
 
     useEffect(() => {
-        obtenerProductos.then((respuesta) => setProductos(respuesta))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
-    })
+
+        elementFinded()
+
+    }, [])
 
     return (
         loading
@@ -20,8 +41,7 @@ const ItemDetailContainer = ({ Prod }) => {
             <h1 className='cargando'> CARGANDO...</h1>
             :
             <div>
-
-                {Prod.map((prod) => <ItemDetail key={prod.id} prod={prod} />)}
+                <ItemDetail key={product.id} prod={product} />
             </div>
     )
 }
