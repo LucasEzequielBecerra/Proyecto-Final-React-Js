@@ -11,3 +11,8 @@
     height: 30px;
     width: 200px;
 }
+
+i{
+    display: flex;
+    align-items: center;
+}

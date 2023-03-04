@@ -4,7 +4,6 @@ import BasicExample from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { arrProductos } from './products/Products';
 import NotFound from './pages/NotFound';
 
 
@@ -24,7 +23,7 @@ function App() {
 
 
 
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </div>

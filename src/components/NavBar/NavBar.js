@@ -26,48 +26,50 @@ function BasicExample() {
 
                 <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul className="navbar-nav  mb-2 mb-lg-0 list-links">
-                        <Link to="/">
-                            <li className="nav-item dropdown">
 
-                                <a className="nav-link dropdown-toggle link-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    PRODUCTOS
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Atriles</a></li>
-                                    <li><a className="dropdown-item" href="#">Escritura</a></li>
+                        <li className="nav-item dropdown">
 
-                                    <li><a className="dropdown-item" href="#">Lapices</a></li>
-                                </ul>
-                            </li>
-                        </Link>
+                            <p className="nav-link dropdown-toggle link-item" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PRODUCTOS
+                            </p>
+                            <ul className="dropdown-menu">
+                                <li><Link to='/' className="dropdown-item">Catalogo de productos</Link></li>
+                                <li><hr className='dropdown-divider' /></li>
+                                <li><p className="dropdown-item">Atriles</p></li>
+                                <li><p className="dropdown-item">Escritura</p></li>
+
+                                <li><p className="dropdown-item">Lapices</p></li>
+                            </ul>
+                        </li>
+
 
 
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle link-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle link-item" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 TECNICAS
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Acuarela</a></li>
-                                <li><a className="dropdown-item" href="#">Oleo</a></li>
+                                <li><a className="dropdown-item">Acuarela</a></li>
+                                <li><a className="dropdown-item">Oleo</a></li>
 
-                                <li><a className="dropdown-item" href="#">Acrilico</a></li>
+                                <li><a className="dropdown-item">Acrilico</a></li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <Link to="/productos" className="nav-link link-item " aria-current="page" >NOVEDADES</Link>
+                            <Link to="/" className="nav-link link-item " aria-current="page" >NOVEDADES</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link link-item" href="#">OFERTAS</a>
+                            <a className="nav-link link-item">OFERTAS</a>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle link-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle link-item" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 MARCAS
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Eureka</a></li>
-                                <li><a className="dropdown-item" href="#">Hutton</a></li>
+                                <li><a className="dropdown-item">Eureka</a></li>
+                                <li><a className="dropdown-item">Hutton</a></li>
 
-                                <li><a className="dropdown-item" href="#">Newton</a></li>
+                                <li><a className="dropdown-item">Newton</a></li>
                             </ul>
                         </li>
 

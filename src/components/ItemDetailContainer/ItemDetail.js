@@ -9,7 +9,7 @@ const ItemDetail = ({ prod }) => (
             <div className='col-lg-6'>
                 <div className='container-img'>
                     <picture>
-                        <img src='https://www.artisticarubens.com.ar/media/catalog/product/cache/fe834d3b1b015d6516f54b6ea9487258/a/t/atril-dalerrowney-mini-12x5cm_1.jpg' className='img-fluid img-producto' />
+                        <img src={prod.img} className='img-fluid img-producto' />
                     </picture>
                 </div>
             </div>
