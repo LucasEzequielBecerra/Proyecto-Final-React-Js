@@ -35,10 +35,10 @@ function BasicExample() {
                             <ul className="dropdown-menu">
                                 <li><Link to='/' className="dropdown-item">Catalogo de productos</Link></li>
                                 <li><hr className='dropdown-divider' /></li>
-                                <li><p className="dropdown-item">Atriles</p></li>
-                                <li><p className="dropdown-item">Escritura</p></li>
+                                <li><Link to='/category/atriles' className="dropdown-item">Atriles</Link></li>
+                                <li><Link to='/category/acuarelas' className="dropdown-item">Acuarelas</Link></li>
 
-                                <li><p className="dropdown-item">Lapices</p></li>
+                                <li><Link to='/category/acuarelas' className="dropdown-item">Lapices</Link></li>
                             </ul>
                         </li>
 

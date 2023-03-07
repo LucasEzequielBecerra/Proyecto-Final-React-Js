@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/product/:idProduct' element={<ItemDetailContainer />} />
-
+            <Route path='/category/:idCategory' element={<ItemListContainer />} />
 
 
             <Route path="*" element={<NotFound />} />
