@@ -35,13 +35,17 @@ const ItemDetailContainer = ({ }) => {
 
     }, [])
 
+    function onAddToCart(count) {
+        alert(`Has agregado ${count} items al carrito`)
+    }
+
     return (
         loading
             ?
             <h1 className='cargando'> CARGANDO...</h1>
             :
             <div>
-                <ItemDetail key={product.id} prod={product} />
+                <ItemDetail onAddToCart={onAddToCart} key={product.id} prod={product} />
             </div>
     )
 }

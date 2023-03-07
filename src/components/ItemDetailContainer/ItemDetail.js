@@ -1,9 +1,9 @@
 import React from 'react'
 import Counter from '../Counter/Counter'
-import { BsCartCheckFill, BsHeart } from "react-icons/bs"
+import { BsHeart } from "react-icons/bs"
 import './Style.css'
 
-const ItemDetail = ({ prod }) => (
+const ItemDetail = ({ prod, onAddToCart }) => (
     <div className='container item-detail'>
         <div className='row'>
             <div className='col-lg-6'>
@@ -23,10 +23,8 @@ const ItemDetail = ({ prod }) => (
                 </div>
                 <div className='container-add'>
                     <p className='quantity'>Cantidad</p>
-                    <Counter />
-                </div>
-                <div className='container-cart-button'>
-                    <button className='cart-button'>AGREGAR    <i className='cart-icon'><BsCartCheckFill /></i> </button>
+                    <Counter onAddToCart={onAddToCart} initial={1} stock={prod.stock} />
+
                 </div>
                 <div className='link-fav'>
                     <a > <BsHeart /> Agregar a favoritos</a>
