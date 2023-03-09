@@ -4,10 +4,12 @@ import Item from './Item'
 
 
 
-const ItemList = ({ Prod }) => {
+const ItemList = ({ Prod, title }) => {
     return (
-
-        Prod.map((prod) => <Item key={prod.id} prod={prod} />)
+        <div className='lista row justify-content-center'>
+            <h2 className='titulo'>{title}</h2>
+            {Prod.map((prod) => <Item key={prod.id} prod={prod} />)}
+        </div>
 
     )
 }

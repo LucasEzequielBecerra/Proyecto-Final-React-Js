@@ -18,7 +18,7 @@ function BasicExample() {
                         <input className="form-control me-2 d-none  d-lg-flex" type="search" placeholder="Buscar" aria-label="Search" />
                         <button className="btn btn-outline-success me-2" type="submit"><BsSearch /></button>
                     </form>
-                    <CartWidget numero={0} />
+                    <CartWidget />
                 </div>
 
             </div>
@@ -35,10 +35,10 @@ function BasicExample() {
                             <ul className="dropdown-menu">
                                 <li><Link to='/' className="dropdown-item">Catalogo de productos</Link></li>
                                 <li><hr className='dropdown-divider' /></li>
-                                <li><Link to='/category/atriles' className="dropdown-item">Atriles</Link></li>
-                                <li><Link to='/category/acuarelas' className="dropdown-item">Acuarelas</Link></li>
+                                <li><Link to='/category/Atriles' className="dropdown-item">Atriles</Link></li>
+                                <li><Link to='/category/Acuarelas' className="dropdown-item">Acuarelas</Link></li>
 
-                                <li><Link to='/category/acuarelas' className="dropdown-item">Lapices</Link></li>
+                                <li><Link to='/category/Acuarelas' className="dropdown-item">Lapices</Link></li>
                             </ul>
                         </li>
 

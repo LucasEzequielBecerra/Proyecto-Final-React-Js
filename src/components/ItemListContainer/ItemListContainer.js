@@ -8,6 +8,7 @@ const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
+    const [title, setTitle] = useState('')
 
     const params = useParams()
     const idCategory = params.idCategory
@@ -17,6 +18,7 @@ const ItemListContainer = () => {
             try {
                 let respuesta = await getProducts()
                 setProducts(respuesta)
+                setTitle('Novedades')
             }
             catch (err) {
                 alert(err)
@@ -28,6 +30,7 @@ const ItemListContainer = () => {
             try {
                 let respuesta = await getProductsByCategory(idCategory)
                 setProducts(respuesta)
+                setTitle(idCategory)
             }
             catch (err) {
                 alert(err)
@@ -52,10 +55,10 @@ const ItemListContainer = () => {
             <h1 className='cargando'> CARGANDO...</h1>
             :
             <div className='container-cards '>
-                <h1 className='titulo container'>CATALOGO DE PRODUCTOS</h1>
-                <div className='lista row justify-content-center'>
-                    <ItemList Prod={products} />
-                </div>
+
+
+                <ItemList title={title} Prod={products} />
+
             </div>
 
     )
